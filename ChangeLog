@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.15.0
+------
+
+* Release 1.15.0
+* Support testing of full json responses
+
 1.14.1
 ------
 
