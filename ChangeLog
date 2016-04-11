@@ -1,18 +1,37 @@
 CHANGES
 =======
 
+1.17.0
+------
+
+* Release 1.17.0
+* Add docs about the pytest situation
+* Add support for pytest
+
 1.16.1
 ------
 
 * Relase 1.16.1
 * Be even more explicit about wsgi-intercept requirement
 * make urllib3 min requirement of 1.11.0
+
+1.16.0
+------
+
 * Release 1.16.0
 * Removing the remaning references to httplib2
 * Be more explicit about redirect and retry handling
 * Switch to use urllib3 from httplib2
+
+1.15.0
+------
+
 * Release 1.15.0
 * Support testing of full json responses
+
+1.14.1
+------
+
 * Release 1.14.1
 * Adjust header evaluation to always use strings
 * Fix JSON formatting in docs
@@ -20,11 +39,23 @@ CHANGES
 * Improve internal reference in docs
 * Fix punctuation problem in jsonpath docs
 * Adjust jsonpath documentation
+
+1.14.0
+------
+
 * Release 1.14.0
 * Switch to using jsonpath_rw_ext 1.0.0
+
+1.13.1
+------
+
 * Release 1.13.1
 * Be more explicit about expect yaml file encoding
 * Add a test to confirm jsonpath returns a list
+
+1.13.0
+------
+
 * release 1.13.0
 * Add small amount of docs for json extensions
 * Add some tests for json extension
@@ -34,9 +65,17 @@ CHANGES
 * Fix typo
 * Switch to mdash where appropriate
 * Remove tox from test-requirements
+
+1.12.0
+------
+
 * Release 1.12.0
 * Use the Interceptor class from wsgi_intercept
 * Expand support for testing with python 3.5
+
+1.11.0
+------
+
 * release 1.11.0
 * Add response_forbidden_headers handler
 * Make table names headings for navigation ease
