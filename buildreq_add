@@ -8,7 +8,6 @@ gabbi
 hacking
 httplib2
 Jinja2
-jsonpath-rw
 linecache2-python
 markupsafe-python
 mccabe-python
