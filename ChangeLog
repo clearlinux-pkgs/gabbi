@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+1.24.0
+------
+
+* release 1.24.0
+* Allow regex in json path values (#160)
+* Clean up content-type parsing
+
 1.23.0
 ------
 
