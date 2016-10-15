@@ -4,7 +4,7 @@
 #
 Name     : gabbi
 Version  : 1.27.0
-Release  : 49
+Release  : 50
 URL      : http://pypi.debian.net/gabbi/gabbi-1.27.0.tar.gz
 Source0  : http://pypi.debian.net/gabbi/gabbi-1.27.0.tar.gz
 Summary  : Declarative HTTP testing library
@@ -27,6 +27,7 @@ BuildRequires : flake8-python
 BuildRequires : gabbi
 BuildRequires : hacking
 BuildRequires : httplib2
+BuildRequires : jsonpath-rw-ext-python
 BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
 BuildRequires : mccabe-python
@@ -76,6 +77,7 @@ bin components for the gabbi package.
 %package python
 Summary: python components for the gabbi package.
 Group: Default
+Requires: jsonpath-rw-ext-python
 Requires: six-python
 Requires: urllib3-python
 
