@@ -1,6 +1,58 @@
 CHANGES
 =======
 
+1.27.0
+------
+
+* Release 1.27.0
+* Add some rudimentary docs for runner input files handling
+* Extract sys.stdin handling from the input_files
+* Extract argparse setup to own method
+* Remove the use of lambda and just call run_suite directly
+* Refactor file path extraction
+* Improve argument type detection
+* Refactor internals to encapsulate function arguments
+* Change CLI interface for input files
+* Add support for multiple input files to runner
+* Refactor runner in preparation of support for multiple input files
+
+1.26.1
+------
+
+* Use testtools.TestCase instead of TestCaseWithFixtures
+
+1.26.0
+------
+
+* Release 1.26.0
+* Pluralize to remain consistent with previous function name
+* Closes #174 by correcting the function name typo
+* Add doc for inner fixtures
+* Fix docstring typos
+* Remove hacks for dealing with response handler global state
+* Add the concept of an inner fixture
+* Update content-handlers to reflect json regex handling
+* Correct group_regex in .testr.conf
+* Don't use usedevelop (#173)
+* Fix heading level
+
+1.25.0
+------
+
+* Release 1.25.0
+* Allow test_loader_name to override test class module (#171)
+* Add some doc and FAQ about quieting pytest warnings (#172)
+
+1.24.1
+------
+
+* Release 1.24.1
+* Cast json match to string when doing regex match (#167)
+* Add a custom move to six to make mock available for both Python 2 and 3. (#169)
+* Add a FAQ about yaml anchors and aliases
+* Add the framework for including a FAQ in docs (#163)
+* Fixing link to google (#162)
+
 1.24.0
 ------
 
@@ -26,6 +78,7 @@ CHANGES
 * Enable a 'url' arg to build_tests (#153)
 * Report better error when request headers malformed
 * Run prior tests with TestResult class
+* Tidy up after rebasing from master
 * Runner cleanup (#141)
 * Use named argumets when establishing Interceptor
 * Fix failing tests
@@ -50,12 +103,18 @@ CHANGES
 * Fix cookie tests and pep8
 * Add a docs for $COOKIE
 * Experiment with implementation of a $COOKIE
+* add docstring to JSONHandler class
 * Make pylint a little happier
+* correct list in handerls docs
+* Tweak the content-handler docs a little bit
 
 1.19.0
 ------
 
 * Relase 1.19.0
+* Make sure the pytest generator knows about content_handlers
+* Handle replacements when no matching content handler
+* Tune up the docs for content-handlers a bit
 * Adjust the definition of LAST_URL
 * Add missing README for tests directory
 
@@ -81,6 +140,12 @@ CHANGES
 ------
 
 * Release 1.17.3
+* Add documentation for ContentHandlers
+* Silence urllib3 warnings
+* Make the list of content_ and response_handlers instance oriented
+* Move the handlers into their own dir
+* Conflate the Response and Content handler concepts
+* Initial proof of ContentHandlers
 * Add 'reason' to verbose header blacklist
 
 1.17.2
