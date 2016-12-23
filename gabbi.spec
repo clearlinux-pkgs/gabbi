@@ -4,7 +4,7 @@
 #
 Name     : gabbi
 Version  : 1.27.1
-Release  : 51
+Release  : 52
 URL      : http://pypi.debian.net/gabbi/gabbi-1.27.1.tar.gz
 Source0  : http://pypi.debian.net/gabbi/gabbi-1.27.1.tar.gz
 Summary  : Declarative HTTP testing library
