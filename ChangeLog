@@ -1,12 +1,84 @@
 CHANGES
 =======
 
+1.32.0
+------
+
+* Release 1.32.0
+* Minor comment clarification
+* Adjust runner to track test suite failures
+
+1.31.0
+------
+
+* Release 1.31.0
+* Handle exceptions when starting fixtures
+* Add a bit of test running arcana to the faq
+
+1.30.2
+------
+
+* Fix verbose printing of json bodies
+
+1.30.1
+------
+
+* Force removal of the .tox when doing make clean
+* Release 1.30.1
+* add application/xml.* as non-binary
+* Remove FAQ entry about pytest warnings
+* Use newer style of stating method in example.yaml
+* Add optional testing of current gabbi with current gnocchi
+* Try using a matrix to support multiple pythons
+* Try using python 3.5 to run all the tests
+* Add testing infrastructure for python 3.6
+
+1.30.0
+------
+
+* release 1.30.0
+* Add docs for the $HISTORY feature
+* Minor test format doc improvements
+* Fixes for failing tests
+* Add $HISTORY variable
+* Improve coverage testing and handling
+* Improve gabbi-run stdin test coverage
+
+1.29.1
+------
+
+* release 1.29.1
+* gabbi-run: Fix usage of STDIN
+
+1.29.0
+------
+
+* release 1.29.0
+* Adjust 'data' docs in format.rst
+* Add docs explaining use of new pytest technique
+* clarify wording of docs
+* Add a -v or --verbose flag to gabbi-run
+* Use the dirname of each runner testfile as the test_dir
+* update docs to mention filepath rather than file
+* enable mock_open to work on py3.3/3.4
+* Allow <@ syntax to safely include subdirectories
+
+1.28.0
+------
+
+* release 1.28.0
+* fixing duplicate word in a comment
+* Pretty print JSON bodies in verbose tests
+
 1.27.1
 ------
 
 * release 1.27.1
 * Support verbose with post data
 * Don't compare strings via object identity
+* Make sure the pytester plugin is called
+* Pass metafunc into the pytest generator
+* Fix pytest warnings by using pytest_generate_tests
 
 1.27.0
 ------
