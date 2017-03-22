@@ -1,6 +1,21 @@
 CHANGES
 =======
 
+1.33.0
+------
+
+* Remove .testrepository/times.dbm each test run
+* release 1.33.0
+* Enforce type of response/content-handler test data
+* Make verbose accept additional valid strings
+* Add verbose option to `build_tests`
+* Allow substitutions in count and delay
+* Fix prefix handling for relative urls
+* Add a test for a relative link and add a comment
+* Avoid duplicating prefix when re-using urls
+* Ensure that $HOME is in passenv
+* Unicode content from disk must become bytes
+
 1.32.0
 ------
 
