@@ -1,6 +1,131 @@
 CHANGES
 =======
 
+1.44.0
+------
+
+* release 1.44.0
+* jsonhandler: allow reading yaml data from disk (#254)
+* Release 1.43.0
+* read data from disk improvement (#251)
+* Block PyYAML above 4.0 for the time being
+* Formatting changes based on pylint and pep8 reviews
+* Switch to using stestr instead of testrepository
+* Relase 1.42.1
+* Check for empty string as host in suitemaker
+* Apply skipIf decorator to test method instead of TestCase
+* update release notes
+* Release 1.42.0
+* Allow listing of tests with no host configured
+* Use python3 when building releases
+* Release 1.41.0
+* Improve the tests for handling numbers, fix a found bug
+* Avoid checking for <@ when data is not a string
+* Make it possible to use non-string $RESPONSE in data
+* Release 1.40.1
+* Clean up warnings shown during testing
+* Tweak docstrings for disambiguation
+* Simplify HTTP setup for readability
+
+1.40.0
+------
+
+* Release 1.40.0
+* Pass strict=True when creating httpclient
+* Require gnocchi and placement targets to pass
+* Fix Gnocchi CI
+
+1.39.1
+------
+
+* Release 1.39.1
+* Raise GabbiFormatError when headers are None
+
+1.39.0
+------
+
+* release 1.39.0
+* Tune up the instructions that get tox installed
+* Update documentation to indicate requirements-dev.txt
+* Move header\_key.yaml to intercept tests
+* Add tox to a new requirements-dev (#233)
+* Update documentation for header key substitution
+* Run replace template for response header keys
+* Add test for replacing template header keys
+* Run replace template for header keys
+
+1.38.0
+------
+
+* Release 1.38.0
+* Make todo about test\_pytest more clear
+* Remove support for Python 3.3
+* Fix pytest handling of fixture-level skips
+* Minor pylint driven formtting cleanups
+* update release notes for 1.37.0
+* Release 1.37.0
+* Brief documentation for safe\_yaml=False
+* Allow to load python object from yaml
+* create pyup.io config file
+
+1.36.0
+------
+
+* Release 1.36.0
+* Add docs for use\_prior\_test
+* Add use\_prior\_test to the py\_test\_generator
+* Add Zane to the contributors
+* Clarify that regular expressions use search() not match()
+* Don't treat data in substitutions as regular expressions
+* Correctly match regexes that start or end with slashes
+* Allow non-ASCII in response when matching regex
+* use\_prior\_test directive and flag
+* use\_prior\_test directive and flag
+* use\_prior\_test directive and flag
+* use\_prior\_test directive and flag
+* use\_prior\_test directive and flag
+* Update travis test matrix for pypy, pypy3 and py33
+* correct spelling mistake
+
+1.35.1
+------
+
+* Release 1.35.1
+* curl to tar to avoid the file having a location
+* Actually run the placement tox target
+* Add a tox target for testing against openstack placement
+* Test for host or intercept after url processing
+* curl to tar to avoid the file having a location
+* Actually run the placement tox target
+* Add a tox target for testing against openstack placement
+
+1.35.0
+------
+
+* release 1.35.0
+* Documentation for <@ in json path values
+* Allow value of a json path query to be read from disk
+* Make \_load\_data\_file public
+* Add some simple docs for the LHS json path substitution
+* Template expansion in LHS of json path test
+* Correct location of gnocchi repo in gnocchi tests
+
+1.34.1
+------
+
+* Release 1.34.1
+* Add configuration for uploading signed sdists and wheels
+* use assertRegex not assertRegexpMatches
+* Update contributors list to reflect recent activity
+
+1.34.0
+------
+
+* Relase 1.34.0
+* Add additional test to coerce.yaml
+* Manage numerals more effectively in replacers
+* Add optional \`test\` param for custom content handlers (#212)
+
 1.33.0
 ------
 
@@ -8,7 +133,7 @@ CHANGES
 * release 1.33.0
 * Enforce type of response/content-handler test data
 * Make verbose accept additional valid strings
-* Add verbose option to `build_tests`
+* Add verbose option to \`build\_tests\`
 * Allow substitutions in count and delay
 * Fix prefix handling for relative urls
 * Add a test for a relative link and add a comment
@@ -40,7 +165,7 @@ CHANGES
 
 * Force removal of the .tox when doing make clean
 * Release 1.30.1
-* add application/xml.* as non-binary
+* add application/xml.\* as non-binary
 * Remove FAQ entry about pytest warnings
 * Use newer style of stating method in example.yaml
 * Add optional testing of current gabbi with current gnocchi
@@ -73,9 +198,9 @@ CHANGES
 * Add docs explaining use of new pytest technique
 * clarify wording of docs
 * Add a -v or --verbose flag to gabbi-run
-* Use the dirname of each runner testfile as the test_dir
+* Use the dirname of each runner testfile as the test\_dir
 * update docs to mention filepath rather than file
-* enable mock_open to work on py3.3/3.4
+* enable mock\_open to work on py3.3/3.4
 * Allow <@ syntax to safely include subdirectories
 
 1.28.0
@@ -93,16 +218,16 @@ CHANGES
 * Don't compare strings via object identity
 * Make sure the pytester plugin is called
 * Pass metafunc into the pytest generator
-* Fix pytest warnings by using pytest_generate_tests
+* Fix pytest warnings by using pytest\_generate\_tests
 
 1.27.0
 ------
 
 * Release 1.27.0
 * Add some rudimentary docs for runner input files handling
-* Extract sys.stdin handling from the input_files
+* Extract sys.stdin handling from the input\_files
 * Extract argparse setup to own method
-* Remove the use of lambda and just call run_suite directly
+* Remove the use of lambda and just call run\_suite directly
 * Refactor file path extraction
 * Improve argument type detection
 * Refactor internals to encapsulate function arguments
@@ -126,7 +251,7 @@ CHANGES
 * Remove hacks for dealing with response handler global state
 * Add the concept of an inner fixture
 * Update content-handlers to reflect json regex handling
-* Correct group_regex in .testr.conf
+* Correct group\_regex in .testr.conf
 * Don't use usedevelop (#173)
 * Fix heading level
 
@@ -134,7 +259,7 @@ CHANGES
 ------
 
 * Release 1.25.0
-* Allow test_loader_name to override test class module (#171)
+* Allow test\_loader\_name to override test class module (#171)
 * Add some doc and FAQ about quieting pytest warnings (#172)
 
 1.24.1
@@ -169,7 +294,7 @@ CHANGES
 ------
 
 * release 1.22.0
-* Enable a 'url' arg to build_tests (#153)
+* Enable a 'url' arg to build\_tests (#153)
 * Report better error when request headers malformed
 * Run prior tests with TestResult class
 * Tidy up after rebasing from master
@@ -182,7 +307,7 @@ CHANGES
 ------
 
 * release 1.21.0
-* Allowing forcing SSL in build_tests and gabbi-run
+* Allowing forcing SSL in build\_tests and gabbi-run
 
 1.20.0
 ------
@@ -206,10 +331,10 @@ CHANGES
 ------
 
 * Relase 1.19.0
-* Make sure the pytest generator knows about content_handlers
+* Make sure the pytest generator knows about content\_handlers
 * Handle replacements when no matching content handler
 * Tune up the docs for content-handlers a bit
-* Adjust the definition of LAST_URL
+* Adjust the definition of LAST\_URL
 * Add missing README for tests directory
 
 1.18.0
@@ -217,7 +342,7 @@ CHANGES
 
 * Release 1.18.0
 * All "live" tests to be skipped
-* First pass at implementing $LAST_URL feature
+* First pass at implementing $LAST\_URL feature
 
 1.17.5
 ------
@@ -236,7 +361,7 @@ CHANGES
 * Release 1.17.3
 * Add documentation for ContentHandlers
 * Silence urllib3 warnings
-* Make the list of content_ and response_handlers instance oriented
+* Make the list of content\_ and response\_handlers instance oriented
 * Move the handlers into their own dir
 * Conflate the Response and Content handler concepts
 * Initial proof of ContentHandlers
@@ -300,7 +425,7 @@ CHANGES
 ------
 
 * Release 1.14.0
-* Switch to using jsonpath_rw_ext 1.0.0
+* Switch to using jsonpath\_rw\_ext 1.0.0
 
 1.13.1
 ------
@@ -326,14 +451,14 @@ CHANGES
 ------
 
 * Release 1.12.0
-* Use the Interceptor class from wsgi_intercept
+* Use the Interceptor class from wsgi\_intercept
 * Expand support for testing with python 3.5
 
 1.11.0
 ------
 
 * release 1.11.0
-* Add response_forbidden_headers handler
+* Add response\_forbidden\_headers handler
 * Make table names headings for navigation ease
 
 1.10.0
@@ -355,7 +480,7 @@ CHANGES
 * Some docstrings for gabbi.reporter
 * Rename arguments and internal variables for readability
 * Move legacy wrapper into original module
-* Rename test_suite_from_yaml to better reflect the actual input
+* Rename test\_suite\_from\_yaml to better reflect the actual input
 * Remove unused import
 * Revert "Extend CI testing to Python 3.5"
 * Extend CI testing to Python 3.5
@@ -376,10 +501,10 @@ CHANGES
 * Correct test class names
 * Fix typos
 * Tidy single test creation
-* Lessen complexity in create_url
+* Lessen complexity in create\_url
 * fix pep8 line length problem
-* Tune up and test query_parameters test directive
-* Extract create_url to utils
+* Tune up and test query\_parameters test directive
+* Extract create\_url to utils
 * Increase unittest coverage
 
 1.8.0
@@ -389,7 +514,7 @@ CHANGES
 * Release 1.8.0
 * Replace func with meth references in docs
 * Document custom response handlers with gabbi-run
-* Make _dump_captured in test_runner work with testr
+* Make \_dump\_captured in test\_runner work with testr
 * Refactor runner internals, documenting response handler loading
 * Add shorthand for response handler extensions
 * Replace dynamic with static UUID
@@ -452,7 +577,7 @@ CHANGES
 * Add docs for verbose http client
 * Allow envivonment variables to set verbose color
 * Extract a COLORMAP
-* Get of useless _do prefix on the printing methods
+* Get of useless \_do prefix on the printing methods
 * Fix pep8
 * Highlight start lines and headers through colorization
 * Fix variable reference
@@ -463,7 +588,7 @@ CHANGES
 * release 1.4.0
 * Make user agent identifier more informative
 * Set the user-agent to gabbi
-* Clarify HEADER_BLACKLIST comment
+* Clarify HEADER\_BLACKLIST comment
 * Provide an environ to override isatty checking
 * Extract color output handling for reuse
 * Class level PREFIX and BLACKLIST defaults
@@ -471,7 +596,7 @@ CHANGES
 * Add missing request/response prefixes in verbose mode
 * Ensure status line is distinct from headers in verbose mode
 * Proof of concept for increased verbosity
-* Clarify query_parameters documentation
+* Clarify query\_parameters documentation
 * Fix pep8 errors in colorization
 * Proof of concept colorization of gabbi-run output
 * Update CONTRIBUTING.md to give some pull request guidance
@@ -480,8 +605,8 @@ CHANGES
 -----
 
 * release 1.3.0
-* Add a bit more doc on query_parameters
-* Add query_parameters field
+* Add a bit more doc on query\_parameters
+* Add query\_parameters field
 * Add more information when status assertion fail
 * Add more debug information for JSONResponseHandler
 
@@ -491,14 +616,14 @@ CHANGES
 * release 1.2.0
 * Starts tests and docs on JSONPath len extension
 * Confirm additional json derived content types work
-* Add `len` extention to the json parser
+* Add \`len\` extention to the json parser
 * fixed typos
 
 1.1.7
 -----
 
 * release 1.1.7
-* Add tests for case._url_parse
+* Add tests for case.\_url\_parse
 * NETLOC shouldn't have default port
 * Make sure all response content marked as JSON is decoded
 
@@ -528,10 +653,10 @@ CHANGES
 
 * release 1.1.3
 * Treat REPLACER errors as test failures
-* Make sure content_type is stripped of whitespace
+* Make sure content\_type is stripped of whitespace
 * Be more robust in processing content-type charset
 * Change format related AssertionErrors to GabbiFormatError
-* Use PATH_INFO when checking for /poller
+* Use PATH\_INFO when checking for /poller
 
 1.1.2
 -----
@@ -547,7 +672,7 @@ CHANGES
 * release 1.1.1
 * Document availability of ' or " in replacers
 * Remove extraneous variable assignment
-* Call super.__init__ on InterceptFixture
+* Call super.\_\_init\_\_ on InterceptFixture
 * Allow single or double quotes in replacers
 * Trim excessive whitespace from output
 * Ensure response header comparisons are case-insensitive
@@ -636,11 +761,11 @@ CHANGES
 * docs typo
 * pep8 cleanups
 * Begin coverage of the utils module
-* Initial tests for build_tests
+* Initial tests for build\_tests
 * Replace assert with explicit conditional
 * cleanup more author tags
 * Switch to hacking code formatting rules
-* Add support for informing stop_fixture of any exception
+* Add support for informing stop\_fixture of any exception
 * Clean up the clean targets so they get more stuff
 
 0.99.1
@@ -685,20 +810,20 @@ CHANGES
 ------
 
 * release 0.12.0
-* Allows templating dict in response_json_paths
+* Allows templating dict in response\_json\_paths
 
 0.11.0
 ------
 
 * release 0.11
-* Error if build_tests has no host or intercept
+* Error if build\_tests has no host or intercept
 * Remove useless usage of lambda
 * Cleanup case module for increased clarity
 
 0.10.0
 ------
 
-* Document request_headers template use
+* Document request\_headers template use
 * Allow templating headers
 * docs typo
 
@@ -715,7 +840,7 @@ CHANGES
 -----
 
 * pep8 cleanups and release 0.8.0
-* Enable $RESPONSE handling in response_headers
+* Enable $RESPONSE handling in response\_headers
 * All references to prior response headers in the current test
 * add covered to requirements
 * add travis irc notifications
@@ -818,8 +943,8 @@ CHANGES
 * Initial commit of sphinx infrastructure
 * Automate test and build a bit more
 
-0.1.0
------
+v0.1.0
+------
 
 * Extract classes to their own files
 * Add some docs to GabbiFixture
