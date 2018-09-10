@@ -1,0 +1,20 @@
+--- gabbi-1.44.0/gabbi.egg-info/requires.txt~	2018-07-16 19:51:34.000000000 +0000
++++ gabbi-1.44.0/gabbi.egg-info/requires.txt	2018-09-10 13:16:24.517669398 +0000
+@@ -4,6 +4,6 @@
+ PyYAML<4.0
+ urllib3>=1.11.0
+ jsonpath-rw-ext>=1.0.0
+-wsgi-intercept>=1.2.2
++wsgi-intercept
+ colorama
+ testtools
+--- gabbi-1.44.0/requirements.txt~	2018-07-16 19:02:06.000000000 +0000
++++ gabbi-1.44.0/requirements.txt	2018-09-10 13:16:40.628669174 +0000
+@@ -4,6 +4,6 @@
+ PyYAML<4.0
+ urllib3>=1.11.0
+ jsonpath-rw-ext>=1.0.0
+-wsgi-intercept>=1.2.2
++wsgi-intercept
+ colorama
+ testtools
