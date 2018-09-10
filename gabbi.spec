@@ -4,7 +4,7 @@
 #
 Name     : gabbi
 Version  : 1.44.0
-Release  : 59
+Release  : 60
 URL      : https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
 Summary  : Declarative HTTP testing library
@@ -16,11 +16,13 @@ Requires: gabbi-license
 Requires: gabbi-python
 Requires: PyYAML
 Requires: colorama
+Requires: jsonpath-rw-ext
 Requires: pbr
 Requires: pytest
 Requires: six
 Requires: testtools
 Requires: urllib3
+Requires: wsgi_intercept
 BuildRequires : Babel-python
 BuildRequires : Jinja2
 BuildRequires : PyYAML
@@ -115,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1533826001
+export SOURCE_DATE_EPOCH=1536552226
 python3 setup.py build -b py3
 
 %check
