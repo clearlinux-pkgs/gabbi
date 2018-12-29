@@ -4,7 +4,7 @@
 #
 Name     : gabbi
 Version  : 1.44.0
-Release  : 62
+Release  : 63
 URL      : https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
 Summary  : Declarative HTTP testing library
