@@ -4,24 +4,18 @@
 #
 Name     : gabbi
 Version  : 1.44.0
-Release  : 64
+Release  : 65
 URL      : https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
 Summary  : Declarative HTTP testing library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: gabbi-bin
-Requires: gabbi-python3
-Requires: gabbi-license
-Requires: gabbi-python
-Requires: PyYAML
-Requires: colorama
+Requires: gabbi-bin = %{version}-%{release}
+Requires: gabbi-license = %{version}-%{release}
+Requires: gabbi-python = %{version}-%{release}
+Requires: gabbi-python3 = %{version}-%{release}
 Requires: jsonpath-rw-ext
 Requires: pbr
-Requires: pytest
-Requires: six
-Requires: testtools
-Requires: urllib3
 Requires: wsgi_intercept
 BuildRequires : Babel-python
 BuildRequires : Jinja2
@@ -78,7 +72,7 @@ true in the environment running the tests.
 %package bin
 Summary: bin components for the gabbi package.
 Group: Binaries
-Requires: gabbi-license
+Requires: gabbi-license = %{version}-%{release}
 
 %description bin
 bin components for the gabbi package.
@@ -95,7 +89,7 @@ license components for the gabbi package.
 %package python
 Summary: python components for the gabbi package.
 Group: Default
-Requires: gabbi-python3
+Requires: gabbi-python3 = %{version}-%{release}
 
 %description python
 python components for the gabbi package.
@@ -119,8 +113,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536585528
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1551038147
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %check
 export http_proxy=http://127.0.0.1:9/
@@ -129,9 +124,9 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 py.test --verbose py2 ||:
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/gabbi
-cp LICENSE %{buildroot}/usr/share/doc/gabbi/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/gabbi
+cp LICENSE %{buildroot}/usr/share/package-licenses/gabbi/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -144,8 +139,8 @@ echo ----[ mark ]----
 /usr/bin/gabbi-run
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/gabbi/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/gabbi/LICENSE
 
 %files python
 %defattr(-,root,root,-)
