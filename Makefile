@@ -1,5 +1,5 @@
 PKG_NAME := gabbi
-URL = https://files.pythonhosted.org/packages/1c/ac/9fb0daf4979d40a1bbc29b7715718b730ef09a6fdc8a183e2ecd35fab948/gabbi-1.44.0.tar.gz
+URL = https://files.pythonhosted.org/packages/03/a7/fb0c14b9b34b7c10a405ce3021bfc9130d06f636dd16611b52ea4e3fd713/gabbi-1.45.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
